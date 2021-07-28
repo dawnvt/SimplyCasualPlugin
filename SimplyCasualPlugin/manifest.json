@@ -1,0 +1,14 @@
+﻿{
+  "$schema": "https://raw.githubusercontent.com/bsmg/BSIPA-MetadataFileSchema/master/Schema.json",
+  "id": "SimplyCasual",
+  "name": "SimplyCasual",
+  "author": "Raine",
+  "version": "1.0.0",
+  "description": "More casual leaderboard system compared to ScoreSaber",
+  "gameVersion": "1.16.4",
+  "dependsOn": {
+    "BSIPA": "^4.2.0",
+    "BeatSaberMarkupLanguage": "^1.5.4",
+    "SiraUtil": "^2.5.7"
+  }
+}
