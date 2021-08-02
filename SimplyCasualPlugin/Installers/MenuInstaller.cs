@@ -1,7 +1,6 @@
 ﻿using SimplyCasualPlugin.Configuration;
 using SimplyCasualPlugin.Managers;
 using SimplyCasualPlugin.UI;
-using SiraUtil;
 using Zenject;
 
 namespace SimplyCasualPlugin.Installers

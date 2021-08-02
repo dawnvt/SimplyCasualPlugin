@@ -1,37 +1,25 @@
 ﻿using IPA;
+using IPA.Config;
+using IPA.Config.Stores;
+using IPA.Logging;
 using SiraUtil.Zenject;
-using IPALogger = IPA.Logging.Logger;
 using SimplyCasualPlugin.Installers;
 using SimplyCasualPlugin.Configuration;
 
 namespace SimplyCasualPlugin
 {
-    [Plugin(RuntimeOptions.DynamicInit)]
-    public class Plugin
-    {
-        private PluginConfig _config;
-        private IPALogger _logger;
+	[Plugin(RuntimeOptions.DynamicInit)]
+	public class Plugin
+	{
+		[Init]
+		public void Init(Logger logger, Config config, Zenjector zenjector)
+		{
+			zenjector.OnMenu<MenuInstaller>().WithParameters(config.Generated<PluginConfig>());
+		}
 
-        public Plugin(PluginConfig config, IPALogger logger)
-        {
-            _config = config;
-            _logger = logger;
-        }
-
-        [Init]
-        public void Init(Zenjector zenjector, PluginConfig config, IPALogger logger)
-        {
-            zenjector.OnMenu<MenuInstaller>().WithParameters(_config, _logger);
-        }
-
-        [OnEnable]
-        public void OnEnable()
-        {
-        }
-
-        [OnDisable]
-        public void OnDisable()
-        {
-        }
-    }
+		[OnEnable, OnDisable]
+		public void OnStateChanged()
+		{
+		}
+	}
 }
