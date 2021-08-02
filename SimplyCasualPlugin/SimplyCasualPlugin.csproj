@@ -7,7 +7,7 @@
         <Nullable>disable</Nullable>
         <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
         <LocalRefsDir Condition="Exists('..\Refs')">..\Refs</LocalRefsDir>
-        <BeatSaberDir>$(LocalRefsDir)</BeatSaberDir>
+        <BeatSaberDir>C:\Program Files (x86)\Steam\steamapps\common\Beat Saber</BeatSaberDir>
         <AppOutputBase>$(MSBuildProjectDirectory)\</AppOutputBase>
         <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
     </PropertyGroup>
@@ -95,5 +95,9 @@
             <PrivateAssets>all</PrivateAssets>
             <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
         </PackageReference>
+    </ItemGroup>
+
+    <ItemGroup>
+      <Content Include="SimplyCasualPlugin.csproj.user" />
     </ItemGroup>
 </Project>
