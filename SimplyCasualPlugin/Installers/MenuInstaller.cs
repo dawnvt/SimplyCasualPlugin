@@ -1,20 +1,21 @@
-﻿using Zenject;
+﻿using SimplyCasualPlugin.Configuration;
+using SiraUtil;
+using Zenject;
 
 namespace SimplyCasualPlugin.Installers
 {
-    public class MenuInstaller : IInstaller
+    public class MenuInstaller : Installer
     {
-
-        public MenuInstaller()
+        private readonly PluginConfig _config;
+        public MenuInstaller(PluginConfig config)
         {
-            
+            _config = config;
         }
         
-        public void InstallBindings()
+        public override void InstallBindings()
         {
-            
+            Container.BindInstance(_config).AsSingle();
+            Container.BindInterfacesAndSelfTo<MenuInstaller>().AsSingle();
         }
-
-        public bool IsEnabled { get; }
     }
 }
