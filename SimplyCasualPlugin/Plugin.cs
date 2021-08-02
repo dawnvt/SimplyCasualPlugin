@@ -1,9 +1,7 @@
 ﻿using IPA;
 using SiraUtil.Zenject;
 using IPALogger = IPA.Logging.Logger;
-using IPA.Config.Stores;
 using SimplyCasualPlugin.Installers;
-using Config = IPA.Config.Config;
 using SimplyCasualPlugin.Configuration;
 
 namespace SimplyCasualPlugin

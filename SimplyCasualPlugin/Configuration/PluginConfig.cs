@@ -6,6 +6,6 @@ namespace SimplyCasualPlugin.Configuration
 {
     public class PluginConfig
     {
-        public virtual bool isSimplyCasualEnabled { get; set; } = true;
+        public virtual bool isSimplyCasualEnabled { get; set; }
     }
 }
