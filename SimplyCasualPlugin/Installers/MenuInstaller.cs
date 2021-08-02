@@ -1,4 +1,6 @@
 ﻿using SimplyCasualPlugin.Configuration;
+using SimplyCasualPlugin.Managers;
+using SimplyCasualPlugin.UI;
 using SiraUtil;
 using Zenject;
 
@@ -15,7 +17,8 @@ namespace SimplyCasualPlugin.Installers
         public override void InstallBindings()
         {
             Container.BindInstance(_config).AsSingle();
-            Container.BindInterfacesAndSelfTo<MenuInstaller>().AsSingle();
+            Container.BindInterfacesAndSelfTo<ModSettingsView>().AsSingle();
+            Container.BindInterfacesAndSelfTo<SettingsViewManager>().AsSingle();
         }
     }
 }

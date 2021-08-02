@@ -1,7 +1,6 @@
-﻿using System.ComponentModel;
-using BeatSaberMarkupLanguage.Attributes;
+﻿using BeatSaberMarkupLanguage.Attributes;
+using BeatSaberMarkupLanguage.Settings;
 using BeatSaberMarkupLanguage.ViewControllers;
-using IPA.Config.Data;
 using SimplyCasualPlugin.Configuration;
 
 namespace SimplyCasualPlugin.UI
@@ -13,17 +12,12 @@ namespace SimplyCasualPlugin.UI
         {
             _config = config;
         }
-        
+
         [UIValue("leaderboardToggle")]
         internal bool EnableLeaderboard
         {
             get => _config.isSimplyCasualEnabled;
-            set
-            {
-                _config.isSimplyCasualEnabled = value;
-                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(EnableLeaderboard)));
-            } 
+            set => _config.isSimplyCasualEnabled = value;
         }
-        
     }
 }

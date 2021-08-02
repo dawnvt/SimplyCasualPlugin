@@ -10,11 +10,18 @@ namespace SimplyCasualPlugin
     public class Plugin
     {
         private PluginConfig _config;
+        private IPALogger _logger;
+
+        public Plugin(PluginConfig config, IPALogger logger)
+        {
+            _config = config;
+            _logger = logger;
+        }
 
         [Init]
-        public void Init(Zenjector zenjector, PluginConfig config)
+        public void Init(Zenjector zenjector, PluginConfig config, IPALogger logger)
         {
-            zenjector.OnMenu<MenuInstaller>().WithParameters(_config);
+            zenjector.OnMenu<MenuInstaller>().WithParameters(_config, _logger);
         }
 
         [OnEnable]
