@@ -11,13 +11,13 @@ namespace SimplyCasualPlugin.ScoreUpload
             
         }
 
-        static async Task Main()
+        private static async Task Main()
         {
             HttpClient client = new HttpClient();
             
             try
             {
-                HttpResponseMessage response = await client.GetAsync("");
+                HttpResponseMessage response = await client.PutAsync();
                 response.EnsureSuccessStatusCode();
                 string responseBody = await response.Content.ReadAsStringAsync();
                 
