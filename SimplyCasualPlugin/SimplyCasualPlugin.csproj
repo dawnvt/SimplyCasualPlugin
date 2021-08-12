@@ -90,6 +90,8 @@
         <EmbeddedResource Include="UI/BSML/*.bsml" />
         <None Remove="UI\ModSettingsView.bsml" />
         <EmbeddedResource Include="UI\ModSettingsView.bsml" />
+        <None Remove="UI\Leaderboard\BSMLLeaderboard.bsml" />
+        <EmbeddedResource Include="UI\Leaderboard\BSMLLeaderboard.bsml" />
     </ItemGroup>
 
     <ItemGroup>

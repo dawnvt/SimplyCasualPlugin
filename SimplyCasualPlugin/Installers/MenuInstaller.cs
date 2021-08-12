@@ -1,6 +1,7 @@
 ﻿using SimplyCasualPlugin.Configuration;
-using SimplyCasualPlugin.Managers;
 using SimplyCasualPlugin.UI;
+using SimplyCasualPlugin.UI.Leaderboard;
+using SimplyCasualPlugin.View_Controllers;
 using Zenject;
 
 namespace SimplyCasualPlugin.Installers
@@ -16,8 +17,8 @@ namespace SimplyCasualPlugin.Installers
         public override void InstallBindings()
         {
             Container.BindInstance(_config).AsSingle();
-            Container.BindInterfacesAndSelfTo<ModSettingsView>().AsSingle();
-            Container.BindInterfacesAndSelfTo<SettingsViewManager>().AsSingle();
+            Container.BindInterfacesAndSelfTo<SettingsViewController>().AsSingle();
+            Container.BindInterfacesAndSelfTo<LeaderboardFloatingScreen>().AsSingle();
         }
     }
 }
